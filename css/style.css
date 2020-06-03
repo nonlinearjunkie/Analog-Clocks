@@ -1,0 +1,157 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+body {
+    background: radial-gradient(circle, rgba(17, 200, 200, 0.616), rgba(11, 211, 211, 0.76));
+}
+
+.outer_box {
+    display: flex;
+    justify-content: center;
+}
+
+.clock {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(238, 235, 229, 0.8);
+    border-radius: 50%;
+    border: 6px solid brown;
+    position: relative;
+}
+
+.numbers>div {
+    /*select all the divs child of parent class numbers */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotateX(-50);
+}
+
+.number1 {
+    transform: rotate(30deg);
+}
+
+.number2 {
+    transform: rotate(60deg);
+}
+
+.number3 {
+    transform: rotate(90deg)scaleX(-1) scaleY(-1) translateY(460px);
+}
+
+.number4 {
+    transform: rotate(120deg) scaleX(-1) scaleY(-1) translateY(460px);
+    ;
+}
+
+.number5 {
+    transform: rotate(150deg) scaleX(-1) scaleY(-1) translateY(460px);
+    ;
+}
+
+.number6 {
+    transform: rotate(180deg) scaleX(-1) scaleY(-1) translateY(460px);
+}
+
+.number7 {
+    transform: rotate(210deg) scaleX(-1) scaleY(-1) translateY(460px);
+    ;
+}
+
+.number8 {
+    transform: rotate(240deg) scaleX(-1) scaleY(-1) translateY(460px);
+    ;
+}
+
+.number9 {
+    transform: rotate(270deg);
+}
+
+.number10 {
+    transform: rotate(300deg);
+}
+
+.number11 {
+    transform: rotate(330deg);
+}
+
+.number12 {
+    transform: rotate(360deg);
+}
+
+.hand>div {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    border-radius: 12px;
+    border: 1px solid white;
+    z-index: 10;
+}
+
+.hour {
+    --angle: 90;
+    transform: translateX(-50%) rotate(calc(var(--angle)*1deg));
+    width: 10px;
+    height: 30%;
+    background-color: black;
+}
+
+.minute {
+    --angle: 30;
+    width: 6px;
+    height: 40%;
+    background-color: black;
+    transform: translateX(-50%) rotate(calc(var(--angle)*1deg));
+}
+
+.second {
+    width: 3px;
+    height: 45%;
+    background-color: red;
+    transform: translateX(-50%) rotate(calc(var(--angle)*1deg));
+}
+
+.clock::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.clock_container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.clock_title {
+    text-align: center;
+}
+
+.clocks {
+    margin: 20px 20px;
+}
+
+.main_title {
+    margin: 2px;
+    text-align: center;
+    font-style: cursive;
+    font-size: 50px;
+    text-decoration: underline;
+}
